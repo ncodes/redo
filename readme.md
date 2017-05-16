@@ -1,4 +1,4 @@
-### Redo - Rerun failing a function continuously
+### Redo - Re-run failing a function continuously
 Redo is a small package that helps you rerun a function that continuously returns an 
 error. It gives you the ability to determine the number of times you want the function
 to be re-executed and the delay between each re-execution.
