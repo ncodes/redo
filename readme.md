@@ -21,6 +21,13 @@ err := redo.Do(func(stop func()) error {
     return fmt.Errorf("something bad. redo")
 })
 
+// Or perform retries using exponential backoff algorithm.
+// Returning nil from the operation will stop the retry
+bfc := NewDefaultBackoffConfig()
+err := redo.BackOff(bfc, func(stop func()) error {
+    return fmt.Errorf("some error. redo")
+})
+
 // returns the error from the last execution
 redo.LastErr    
 

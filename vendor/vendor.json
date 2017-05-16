@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "NfQBkfSVHEmnR2OaORxdOXmhLcs=",
+			"path": "github.com/cenkalti/backoff",
+			"revision": "5d150e7eec023ce7a124856b37c68e54b4050ac7",
+			"revisionTime": "2017-03-29T03:22:34Z"
+		}
+	],
+	"rootPath": "github.com/ncodes/redo"
+}
