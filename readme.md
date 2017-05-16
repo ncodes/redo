@@ -12,19 +12,19 @@ go get github.com/ncodes/redo
 
 ```go
 // Create a Redo instance, specifying the max retries and delay
-redo := NewRedo(3, 100*time.Millisecond)
+redo := NewRedo()
 
 // Run a function that receives a method to stop the further re-execution.
 // The function will be re-executed as long as it continues to return error.
-err := redo.Do(func(stop func()) error {
+err := redo.Do(3, 100*time.Millisecond, func(stop func()) error {
     // stop() - Call to further stop re-execution
     return fmt.Errorf("something bad. redo")
 })
 
 // Or perform retries using exponential backoff algorithm.
 // Returning nil from the operation will stop the retry
-bfc := NewDefaultBackoffConfig()
-err := redo.BackOff(bfc, func(stop func()) error {
+c := NewDefaultBackoffConfig()
+err := redo.BackOff(c, func(stop func()) error {
     return fmt.Errorf("some error. redo")
 })
 
