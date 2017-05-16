@@ -29,4 +29,4 @@ redo.Stop()
 ```
 
 #### Documentation
-(GoDoc)[https://godoc.org/github.com/ncodes/redo]
+(https://godoc.org/github.com/ncodes/redo)[GoDoc]
